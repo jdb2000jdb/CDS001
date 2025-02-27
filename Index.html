@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CDS</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100vh;
+            overflow-y: auto;
+            background-color: #333;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+
+            .menu a {
+                color: white;
+                text-decoration: none;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+
+        .contenido {
+            margin-left: 220px;
+            padding: 20px;
+        }
+
+        h2 {
+            margin-top: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="menu">
+        <a href="markmap-CDS-Esp.html" target="_blank" title="CDS en Español" onmouseover="mostrarContenido('Información sobre el CDS. Videos. Preguntas frecuentes. Protocolos de la A a la Z. En Español')" onmouseout="limpiarContenido()">Mapa conceptual de CDS en Español</a>
+        <a href="markmap-CDS-Port.html" target="_blank" title="CDS em Português" onmouseover="mostrarContenido('Informações sobre CDS. Vídeos. Perguntas frequentes. Protocolos de A a Z. Em Português')" onmouseout="limpiarContenido()">Mapa conceitual do CDS em Português</a>
+    </div>
+
+    <div class="contenido" id="contenido">
+    </div>
+
+    <script>function mostrarContenido(texto) {
+            document.getElementById('contenido').textContent = texto;
+        }
+
+        function limpiarContenido() {
+            document.getElementById('contenido').textContent = '';
+        }</script>
+</body>
+</html>
